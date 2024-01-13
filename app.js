@@ -44,14 +44,15 @@ app.delete('/api/deleteTodo/:id', (req, res) => {
   const todoId = req.params.id;
 
   
-  const sql = 'DELETE FROM todolist WHERE id = ?';
+  const sql3 = 'DELETE FROM todolist WHERE id = ?';
 
-  db.query(sql, [todoId], (err, result) => {
-    if (err) return res.json(err);
+  db.query(sql3, [todoId], (err, result) => {
+    if (err) return res.json(err); 
+    console.log("Deleted")
      
  
       
-    return res.json(data);
+    
     
   });
 });
